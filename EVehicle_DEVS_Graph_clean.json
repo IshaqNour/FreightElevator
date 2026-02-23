@@ -1,0 +1,69 @@
+{
+  "class": "go.GraphLinksModel",
+  "copiesArrays": true,
+  "copiesArrayObjects": true,
+  "linkFromPortIdProperty": "fromPort",
+  "linkToPortIdProperty": "toPort",
+  "nodeDataArray": [
+    {
+      "text": "EVehicle",
+      "isGroup": true,
+      "color": "blue",
+      "I": [
+        {
+          "id": "in",
+          "text": "in\nint",
+          "color": "red"
+        }
+      ],
+      "O": [
+        {
+          "id": "out",
+          "text": "out\nint",
+          "color": "red"
+        }
+      ],
+      "key": -4
+    },
+    {
+      "text": "IDLE\nTa=inf",
+      "figure": "Ellipse",
+      "size": "140 90",
+      "fill": "white",
+      "key": -1,
+      "loc": "-150 0",
+      "group": -4
+    },
+    {
+      "text": "MOVING\nTa=t",
+      "figure": "Ellipse",
+      "size": "140 90",
+      "fill": "white",
+      "key": -2,
+      "loc": "150 0",
+      "group": -4
+    }
+  ],
+  "linkDataArray": [
+    {
+      "from": -1,
+      "to": -2,
+      "label": "in?t",
+      "fromPort": "B",
+      "toPort": "B",
+      "color": "black"
+    },
+    {
+      "from": -2,
+      "to": -1,
+      "label": "out!t",
+      "fromPort": "T",
+      "toPort": "T",
+      "dash_array": [
+        6,
+        3
+      ],
+      "color": "black"
+    }
+  ]
+}

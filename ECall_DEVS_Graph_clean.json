@@ -1,0 +1,82 @@
+{
+  "class": "go.GraphLinksModel",
+  "copiesArrays": true,
+  "copiesArrayObjects": true,
+  "linkFromPortIdProperty": "fromPort",
+  "linkToPortIdProperty": "toPort",
+  "nodeDataArray": [
+    {
+      "text": "ECall",
+      "isGroup": true,
+      "color": "blue",
+      "I": [
+        {
+          "id": "inside_call",
+          "text": "inside_call\nint",
+          "color": "red"
+        },
+        {
+          "id": "outside_call",
+          "text": "outside_call\nint",
+          "color": "red"
+        }
+      ],
+      "O": [
+        {
+          "id": "call_gen",
+          "text": "call_gen\nint",
+          "color": "red"
+        }
+      ],
+      "key": -4
+    },
+    {
+      "text": "PASSIVE\nTa=inf",
+      "figure": "Ellipse",
+      "size": "140 90",
+      "fill": "white",
+      "key": -1,
+      "loc": "-150 0",
+      "group": -4
+    },
+    {
+      "text": "ACTIVE\nTa=0",
+      "figure": "Ellipse",
+      "size": "140 90",
+      "fill": "white",
+      "key": -2,
+      "loc": "150 0",
+      "group": -4
+    }
+  ],
+  "linkDataArray": [
+    {
+      "from": -1,
+      "to": -2,
+      "label": "inside_call?f",
+      "fromPort": "T",
+      "toPort": "T",
+      "color": "black"
+    },
+    {
+      "from": -1,
+      "to": -2,
+      "label": "outside_call?f",
+      "fromPort": "B",
+      "toPort": "B",
+      "color": "black"
+    },
+    {
+      "from": -2,
+      "to": -1,
+      "label": "call_gen!f",
+      "fromPort": "L",
+      "toPort": "R",
+      "dash_array": [
+        6,
+        3
+      ],
+      "color": "black"
+    }
+  ]
+}

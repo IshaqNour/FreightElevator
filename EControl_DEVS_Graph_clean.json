@@ -1,0 +1,137 @@
+{
+  "class": "go.GraphLinksModel",
+  "copiesArrays": true,
+  "copiesArrayObjects": true,
+  "linkFromPortIdProperty": "fromPort",
+  "linkToPortIdProperty": "toPort",
+  "nodeDataArray": [
+    {
+      "text": "EControl",
+      "isGroup": true,
+      "color": "blue",
+      "I": [
+        {
+          "id": "acall",
+          "text": "acall\nint",
+          "color": "red"
+        },
+        {
+          "id": "fback",
+          "text": "fback\nint",
+          "color": "red"
+        }
+      ],
+      "O": [
+        {
+          "id": "timem",
+          "text": "timem\nint",
+          "color": "red"
+        },
+        {
+          "id": "floor",
+          "text": "floor\nint",
+          "color": "red"
+        }
+      ],
+      "key": -10
+    },
+    {
+      "text": "IDLE\nTa=inf",
+      "figure": "Ellipse",
+      "size": "150 90",
+      "fill": "white",
+      "key": -1,
+      "loc": "-360 0",
+      "group": -10
+    },
+    {
+      "text": "ISSUE_MOVE\nTa=0",
+      "figure": "Ellipse",
+      "size": "200 90",
+      "fill": "white",
+      "key": -2,
+      "loc": "-120 0",
+      "group": -10
+    },
+    {
+      "text": "WAIT_DONE\nTa=inf",
+      "figure": "Ellipse",
+      "size": "200 90",
+      "fill": "white",
+      "key": -3,
+      "loc": "120 0",
+      "group": -10
+    },
+    {
+      "text": "ARRIVED\nTa=0",
+      "figure": "Ellipse",
+      "size": "150 90",
+      "fill": "white",
+      "key": -4,
+      "loc": "360 0",
+      "group": -10
+    }
+  ],
+  "linkDataArray": [
+    {
+      "from": -1,
+      "to": -2,
+      "label": "acall?f",
+      "fromPort": "R",
+      "toPort": "L",
+      "color": "black"
+    },
+    {
+      "from": -3,
+      "to": -3,
+      "label": "acall?f (enqueue)",
+      "fromPort": "R",
+      "toPort": "R",
+      "color": "black"
+    },
+    {
+      "from": -2,
+      "to": -3,
+      "label": "timem!t",
+      "fromPort": "R",
+      "toPort": "L",
+      "dash_array": [
+        6,
+        3
+      ],
+      "color": "black"
+    },
+    {
+      "from": -3,
+      "to": -4,
+      "label": "fback?t",
+      "fromPort": "R",
+      "toPort": "L",
+      "color": "black"
+    },
+    {
+      "from": -4,
+      "to": -1,
+      "label": "floor!f [queue empty]",
+      "fromPort": "T",
+      "toPort": "T",
+      "dash_array": [
+        6,
+        3
+      ],
+      "color": "black"
+    },
+    {
+      "from": -4,
+      "to": -2,
+      "label": "floor!f [queue not empty]",
+      "fromPort": "B",
+      "toPort": "B",
+      "dash_array": [
+        6,
+        3
+      ],
+      "color": "black"
+    }
+  ]
+}
